@@ -2,6 +2,8 @@ com\archtech\todo\ListTodoServlet.class
 com\archtech\todo\AddTodoServlet.class
 com\archtech\todo\DeleteTodoServlet.class
 com\archtech\todo\TodoService.class
+com\archtech\filter\LoginRequiredFilter.class
 com\archtech\todo\Todo.class
 com\archtech\login\LoginService.class
 com\archtech\login\LoginServlet.class
+com\archtech\logout\LogoutServlet.class

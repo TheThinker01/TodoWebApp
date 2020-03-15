@@ -18,11 +18,10 @@
     <a href="/" class="navbar-brand">ToDo</a>
     <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Todo</a></li>
-        <li><a href="#">In28Minutes</a></li>
+        <li><a href="/todo.do">Todo</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-        <li ><a href="#">Login</a></li>
+        <li ><a href="/login.do">Login</a></li>
     </ul>
 </nav>
 <div class="container">
@@ -35,9 +34,9 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
-<footer class="footer">
-    <p>footer</p>
-</footer>
+<%--<footer class="footer">--%>
+<%--    <p>footer</p>--%>
+<%--</footer>--%>
 <script src="webjars/jquery/1.9.1/jquery.min.js"></script>
 <script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
