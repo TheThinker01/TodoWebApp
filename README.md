@@ -1,4 +1,4 @@
-#ToDo Web App
+# ToDo Web App
 ### A Todo management app 
 ##### Built on JAVA EE 7.0 using Java Servlet and JSP
 Requirements  
