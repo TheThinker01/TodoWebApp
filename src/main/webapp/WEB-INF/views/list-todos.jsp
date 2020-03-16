@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: archi
-  Date: 13-03-2020
-  Time: 19:04
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -29,12 +22,13 @@
 <h2>Your Todos are:</h2>
 <ol>
     <c:forEach items="${todos}" var="todo">
-        <li>${todo.name} &nbsp;&nbsp;&nbsp;<a href="/delete-todo.do?name=${todo.name}">Delete</a></li>
+        <li>${todo.name} &nbsp;&nbsp;&nbsp; ${todo.category}<a href="/delete-todo.do?name=${todo.name}">Delete</a></li>
     </c:forEach>
 </ol>
 <h3>Want To add a new todo?</h3>
 <form method="post" action="/add-todo.do">
-    <input type="text" name="tname"/>
+    Name&nbsp;<input type="text" name="tname"/>
+    Category&nbsp;<input type="text" name="category"/>
     <button type="submit" class="btn btn-primary">Add TODO</button>
 </form>
 </div>

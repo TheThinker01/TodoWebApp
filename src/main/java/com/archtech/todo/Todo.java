@@ -4,9 +4,11 @@ import java.util.Objects;
 
 public class Todo {
     private String name;
+    private String category;
 
-    public Todo(String name) {
+    public Todo(String name, String category) {
         this.name = name;
+        this.category = category;
     }
 
     public String getName() {
@@ -17,10 +19,19 @@ public class Todo {
         this.name = name;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
     @Override
     public String toString() {
-        return "todo{" +
+        return "Todo{" +
                 "name='" + name + '\'' +
+                ", category='" + category + '\'' +
                 '}';
     }
 

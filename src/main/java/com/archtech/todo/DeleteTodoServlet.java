@@ -13,7 +13,8 @@ public class DeleteTodoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String tname = req.getParameter("name");
-        todoService.deleteTodo(new Todo(tname));
+        String ccategory = req.getParameter("category");
+        todoService.deleteTodo(new Todo(tname,ccategory));
         resp.sendRedirect("/todo.do");
     }
 }
