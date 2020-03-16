@@ -20,15 +20,33 @@
 <div class="container">
 <h1>Welcome ${name}</h1>
 <h2>Your Todos are:</h2>
-<ol>
-    <c:forEach items="${todos}" var="todo">
-        <li>${todo.name} &nbsp;&nbsp;&nbsp; ${todo.category}<a href="/delete-todo.do?name=${todo.name}">Delete</a></li>
-    </c:forEach>
-</ol>
-<h3>Want To add a new todo?</h3>
+    <table class="table table-hover">
+        <thead>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Actions</th>
+        </thead>
+        <tbody>
+        <c:forEach items="${todos}" var="todo">
+            <tr>
+                <td>${todo.name}</td>
+                <td>${todo.category}</td>
+                <td><a class="btn btn-danger" href="/delete-todo.do?name=${todo.name}">Delete</a></td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+
+<h3>Want To Add A New Todo?</h3>
 <form method="post" action="/add-todo.do">
-    Name&nbsp;<input type="text" name="tname"/>
-    Category&nbsp;<input type="text" name="category"/>
+    <fieldset class="form-group">
+        <label>Description</label>
+    <input type="text" name="tname" class="form-control"/>
+    </fieldset>
+    <fieldset class="form-group">
+        <label>Category</label>
+        <input class="form-control" type="text" name="category"/>
+    </fieldset>
     <button type="submit" class="btn btn-primary">Add TODO</button>
 </form>
 </div>
