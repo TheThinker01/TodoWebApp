@@ -10,6 +10,12 @@ import java.io.IOException;
 @WebServlet(urlPatterns = "/add-todo.do")
 public class AddTodoServlet extends HttpServlet {
     TodoService addTodoService = new TodoService();
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.getRequestDispatcher("/WEB-INF/views/add-todo.jsp").forward(req,resp);
+    }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name=req.getParameter("tname");
