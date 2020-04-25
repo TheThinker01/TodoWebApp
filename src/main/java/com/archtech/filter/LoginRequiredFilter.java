@@ -26,8 +26,8 @@ public class LoginRequiredFilter implements Filter {
         }
     }
 
-    @Override
-    public void destroy() {
+        @Override
+        public void destroy() {
 
-    }
+        }
 }
